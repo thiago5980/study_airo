@@ -1,4 +1,5 @@
 from setuptools import setup
+from setuptools import find_packages
 
 package_name = 'rospy_pub'
 
@@ -20,6 +21,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'helloworld_publisher = rospy_pub.helloworld_publisher:main',
+            'helloworld_subscriber = rospy_pub.helloworld_subscriber:main',
         ],
     },
 )
